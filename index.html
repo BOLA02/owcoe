@@ -182,7 +182,7 @@
 
 <section
   id="hero-section"
-  class="relative flex min-h-[70vh] w-full flex-col items-center justify-center overflow-hidden text-center"
+  class="relative flex min-h-[30vh] w-full flex-col items-center justify-center overflow-hidden text-center"
   aria-labelledby="hero-heading"
 >
   <!-- Background Video -->
@@ -249,41 +249,50 @@
 
 
 <main class="flex flex-1 flex-col bg-white">
-  <div class="mx-auto w-full max-w-6xl px-6 py-16 space-y-16">
+  <div class="w-full max-w-7xl mx-auto px-4 py-4 space-y-12">
 
     <!-- ==================== ABOUT SECTION ==================== -->
-    <section id="about" class="flex flex-col md:flex-row items-center gap-10">
-      <div class="flex-1">
-        <h2 class="text-[#00329e] text-2xl font-bold mb-4">About Our College</h2>
-        <p class="text-[#5e6d8d] leading-relaxed text-sm">
-          Oswald Waller College of Education is committed to shaping the next generation of educators through innovative teaching, 
-          research, and community engagement. Our mission is to foster a culture of learning that inspires academic and personal growth.
-        </p>
-        <a
-          href="#"
-          class="inline-flex items-center gap-2 mt-5 bg-[#00329e] text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-[#002a8a] transition"
-        >
-          Learn More
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
-            <path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/>
-          </svg>
-        </a>
-      </div>
-      <div class="flex-1">
-        <img src="/img/vice.png" alt="About the college" class="rounded-xl shadow-md w-full h-auto object-cover">
-      </div>
-    </section>
+<section id="about" class="flex flex-col md:flex-row items-start gap-8 pt-0">
+  <div class="flex-1 flex flex-col justify-start self-start">
+    <h2 class="text-[#00329e] text-2xl font-bold mb-3">About Our College</h2>
+    <p class="text-[#5e6d8d] leading-relaxed text-sm">
+      Oswald Waller College of Education is committed to shaping the next generation of educators through innovative teaching,
+      research, and community engagement. Our mission is to foster a culture of learning that inspires academic and personal growth.
+    </p>
+    <a
+      href="#"
+      class="inline-flex justify-center items-center w-40 mt-5 bg-[#00329e] text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-[#002a8a] transition shadow-md"
+    >
+      Learn More
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256" class="ml-2">
+        <path
+          d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"
+        />
+      </svg>
+    </a>
+  </div>
+
+  <div class="flex-1 flex justify-center items-start">
+    <img
+      src="/img/vice.png"
+      alt="About the college"
+      class="rounded-xl shadow-md w-full h-auto object-cover"
+    />
+  </div>
+</section>
+
+
 
     <!-- ==================== ACADEMIC PROGRAMS ==================== -->
     <section id="programs">
       <h2 class="text-[#00329e] text-2xl font-bold mb-6 text-center">Academic Programs</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition">
-          <img src="/img/f.jpg" alt="Undergraduate" class="w-full h-56 object-cover">
+          <img src="/img/f.jpg" alt="Undergraduate" class="w-full h-56 object-cover" />
           <div class="p-5">
             <h3 class="text-[#101318] text-lg font-semibold mb-2">Undergraduate Programs</h3>
             <p class="text-[#5e6d8d] text-sm leading-relaxed mb-4">
-              Our undergraduate courses prepare aspiring educators to thrive in diverse learning environments through 
+              Our undergraduate courses prepare aspiring educators to thrive in diverse learning environments through
               hands-on experience and academic excellence.
             </p>
             <a href="#" class="text-[#00329e] text-sm font-semibold hover:underline">Explore More →</a>
@@ -291,7 +300,7 @@
         </div>
 
         <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition">
-          <img src="/img/e.jpg" alt="Graduate" class="w-full h-56 object-cover">
+          <img src="/img/e.jpg" alt="Graduate" class="w-full h-56 object-cover" />
           <div class="p-5">
             <h3 class="text-[#101318] text-lg font-semibold mb-2">Graduate Programs</h3>
             <p class="text-[#5e6d8d] text-sm leading-relaxed mb-4">
@@ -304,166 +313,134 @@
     </section>
 
     <!-- ==================== FACULTIES & DEPARTMENTS SECTION ==================== -->
-<section id="faculties" class="bg-gray-100 py-16">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-[#00329e] text-2xl font-bold mb-10 text-center">
-      Faculties & Departments
-    </h2>
+    <section id="faculties" class="bg-gray-100 py-4">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-[#00329e] text-2xl font-bold mb-10 text-center">Faculties & Departments</h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Faculty 1 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-        <img src="img/ad.jpg" alt="Faculty of Science" class="w-full h-40 object-cover" />
-        <div class="p-5">
-          <p class="text-xs text-gray-500 mb-1 flex justify-between items-center">
-            <span class="text-blue-600 font-medium">Science</span>
-            <span>Est. 1983</span>
-          </p>
-          <h3 class="text-base font-bold text-[#101318] mb-1">Faculty of Science (Education)</h3>
-          <p class="text-sm text-[#5e6d8d]">
-            Physics, Chemistry, Biology, and Mathematics Education programs.
-          </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Faculty Cards -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+            <img src="img/ad.jpg" alt="Faculty of Science" class="w-full h-40 object-cover" />
+            <div class="p-5">
+              <p class="text-xs text-gray-500 mb-1 flex justify-between items-center">
+                <span class="text-blue-600 font-medium">Science</span><span>Est. 1983</span>
+              </p>
+              <h3 class="text-base font-bold text-[#101318] mb-1">Faculty of Science (Education)</h3>
+              <p class="text-sm text-[#5e6d8d]">Physics, Chemistry, Biology, and Mathematics Education programs.</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+            <img src="img/bd.jpg" alt="Faculty of Languages" class="w-full h-40 object-cover" />
+            <div class="p-5">
+              <p class="text-xs text-gray-500 mb-1 flex justify-between items-center">
+                <span class="text-green-600 font-medium">Languages</span><span>Est. 1992</span>
+              </p>
+              <h3 class="text-base font-bold text-[#101318] mb-1">Faculty of Languages (Education)</h3>
+              <p class="text-sm text-[#5e6d8d]">English, French, Hausa, and other language education programs.</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+            <img src="img/cd.jpg" alt="Faculty of Arts" class="w-full h-40 object-cover" />
+            <div class="p-5">
+              <p class="text-xs text-gray-500 mb-1 flex justify-between items-center">
+                <span class="text-orange-600 font-medium">Arts</span><span>Est. 1978</span>
+              </p>
+              <h3 class="text-base font-bold text-[#101318] mb-1">Faculty of Arts & Social Sciences</h3>
+              <p class="text-sm text-[#5e6d8d]">Arts, humanities, and social sciences programs.</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+            <img src="img/dd.jpg" alt="Faculty of Vocational Education" class="w-full h-40 object-cover" />
+            <div class="p-5">
+              <p class="text-xs text-gray-500 mb-1 flex justify-between items-center">
+                <span class="text-purple-600 font-medium">Vocational</span><span>Est. 1990</span>
+              </p>
+              <h3 class="text-base font-bold text-[#101318] mb-1">Faculty of Vocational Education</h3>
+              <p class="text-sm text-[#5e6d8d]">Technical and vocational education training programs.</p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Faculty 2 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-        <img src="img/bd.jpg" alt="Faculty of Languages" class="w-full h-40 object-cover" />
-        <div class="p-5">
-          <p class="text-xs text-gray-500 mb-1 flex justify-between items-center">
-            <span class="text-green-600 font-medium">Languages</span>
-            <span>Est. 1992</span>
-          </p>
-          <h3 class="text-base font-bold text-[#101318] mb-1">Faculty of Languages (Education)</h3>
-          <p class="text-sm text-[#5e6d8d]">
-            English, French, Hausa, and other language education programs.
-          </p>
-        </div>
-      </div>
-
-      <!-- Faculty 3 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-        <img src="img/cd.jpg" alt="Faculty of Arts" class="w-full h-40 object-cover" />
-        <div class="p-5">
-          <p class="text-xs text-gray-500 mb-1 flex justify-between items-center">
-            <span class="text-orange-600 font-medium">Arts</span>
-            <span>Est. 1978</span>
-          </p>
-          <h3 class="text-base font-bold text-[#101318] mb-1">Faculty of Arts & Social Sciences</h3>
-          <p class="text-sm text-[#5e6d8d]">
-            Arts, humanities, and social sciences programs.
-          </p>
-        </div>
-      </div>
-
-      <!-- Faculty 4 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-        <img src="img/dd.jpg" alt="Faculty of Vocational Education" class="w-full h-40 object-cover" />
-        <div class="p-5">
-          <p class="text-xs text-gray-500 mb-1 flex justify-between items-center">
-            <span class="text-purple-600 font-medium">Vocational</span>
-            <span>Est. 1990</span>
-          </p>
-          <h3 class="text-base font-bold text-[#101318] mb-1">Faculty of Vocational Education</h3>
-          <p class="text-sm text-[#5e6d8d]">
-            Technical and vocational education training programs.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- =========== STATISTICS (WITH COUNT ANIMATION) ==================== -->
-<section id="university-stats" class="bg-[#f8f9fc] py-16 text-center">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-[#00329e] text-2xl font-bold mb-10">University Statistics</h2>
-
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 text-center">
-      <div>
-        <i class="fa-solid fa-users text-[#00329e] text-3xl mb-2"></i>
-        <h3 class="count text-xl font-bold text-[#101318]" data-target="14000">0</h3>
-        <p class="text-sm text-[#5e6d8d]">Students Enrolled</p>
+    <section id="university-stats" class="bg-[#f8f9fc] py-4 text-center">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-[#00329e] text-2xl font-bold mb-10">University Statistics</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 text-center">
+          <div>
+            <i class="fa-solid fa-users text-[#00329e] text-3xl mb-2"></i>
+            <h3 class="count text-xl font-bold text-[#101318]" data-target="14000">0</h3>
+            <p class="text-sm text-[#5e6d8d]">Students Enrolled</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-graduation-cap text-[#00329e] text-3xl mb-2"></i>
+            <h3 class="count text-xl font-bold text-[#101318]" data-target="85">0</h3>
+            <p class="text-sm text-[#5e6d8d]">Graduation Rate (%)</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-chalkboard-user text-[#00329e] text-3xl mb-2"></i>
+            <h3 class="count text-xl font-bold text-[#101318]" data-target="760">0</h3>
+            <p class="text-sm text-[#5e6d8d]">Faculty Members</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-trophy text-[#00329e] text-3xl mb-2"></i>
+            <h3 class="count text-xl font-bold text-[#101318]" data-target="25">0</h3>
+            <p class="text-sm text-[#5e6d8d]">Awards Won</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-user-graduate text-[#00329e] text-3xl mb-2"></i>
+            <h3 class="count text-xl font-bold text-[#101318]" data-target="15492">0</h3>
+            <p class="text-sm text-[#5e6d8d]">Undergraduate Students</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-book-open text-[#00329e] text-3xl mb-2"></i>
+            <h3 class="count text-xl font-bold text-[#101318]" data-target="213">0</h3>
+            <p class="text-sm text-[#5e6d8d]">Postgraduate Students</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-sack-dollar text-[#00329e] text-3xl mb-2"></i>
+            <h3 class="count text-xl font-bold text-[#101318]" data-target="4.5" data-suffix="B">0</h3>
+            <p class="text-sm text-[#5e6d8d]">Total Budget</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-chart-line text-[#00329e] text-3xl mb-2"></i>
+            <h3 class="count text-xl font-bold text-[#101318]" data-target="555" data-suffix="M">0</h3>
+            <p class="text-sm text-[#5e6d8d]">IGR Revenue</p>
+          </div>
+        </div>
+        <button class="mt-8 bg-[#00329e] hover:bg-[#002d72] text-white font-semibold px-6 py-2 rounded-md">
+          View Statistics Details
+        </button>
       </div>
-
-      <div>
-        <i class="fa-solid fa-graduation-cap text-[#00329e] text-3xl mb-2"></i>
-        <h3 class="count text-xl font-bold text-[#101318]" data-target="85">0</h3>
-        <p class="text-sm text-[#5e6d8d]">Graduation Rate (%)</p>
-      </div>
-
-      <div>
-        <i class="fa-solid fa-chalkboard-user text-[#00329e] text-3xl mb-2"></i>
-        <h3 class="count text-xl font-bold text-[#101318]" data-target="760">0</h3>
-        <p class="text-sm text-[#5e6d8d]">Faculty Members</p>
-      </div>
-
-      <div>
-        <i class="fa-solid fa-trophy text-[#00329e] text-3xl mb-2"></i>
-        <h3 class="count text-xl font-bold text-[#101318]" data-target="25">0</h3>
-        <p class="text-sm text-[#5e6d8d]">Awards Won</p>
-      </div>
-
-      <div>
-        <i class="fa-solid fa-user-graduate text-[#00329e] text-3xl mb-2"></i>
-        <h3 class="count text-xl font-bold text-[#101318]" data-target="15492">0</h3>
-        <p class="text-sm text-[#5e6d8d]">Undergraduate Students</p>
-      </div>
-
-      <div>
-        <i class="fa-solid fa-book-open text-[#00329e] text-3xl mb-2"></i>
-        <h3 class="count text-xl font-bold text-[#101318]" data-target="213">0</h3>
-        <p class="text-sm text-[#5e6d8d]">Postgraduate Students</p>
-      </div>
-
-      <div>
-        <i class="fa-solid fa-sack-dollar text-[#00329e] text-3xl mb-2"></i>
-        <h3 class="count text-xl font-bold text-[#101318]" data-target="4.5" data-suffix="B">0</h3>
-        <p class="text-sm text-[#5e6d8d]">Total Budget</p>
-      </div>
-
-      <div>
-        <i class="fa-solid fa-chart-line text-[#00329e] text-3xl mb-2"></i>
-        <h3 class="count text-xl font-bold text-[#101318]" data-target="555" data-suffix="M">0</h3>
-        <p class="text-sm text-[#5e6d8d]">IGR Revenue</p>
-      </div>
-    </div>
-
-    <button class="mt-8 bg-[#00329e] hover:bg-[#002d72] text-white font-semibold px-6 py-2 rounded-md">
-      View Statistics Details
-    </button>
-  </div>
-</section>
-
+    </section>
 
   </div>
 </main>
 
 <!-- ==================== CAMPUS / GENERAL NEWS SECTION ==================== -->
-<section id="campus-news" class="bg-white py-16">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-[#00329e] text-2xl font-bold mb-8">
-      Campus / General News
-    </h2>
+<section id="campus-news" class="bg-white py-8">
+  <div class="w-full max-w-7xl mx-auto px-4">
+    <h2 class="text-[#00329e] text-2xl font-bold mb-8">Campus / General News</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
       <!-- Left Featured Article -->
-      <div class="md:col-span-2 space-y-4">
+      <div class="md:col-span-2 space-y-5">
         <div class="rounded-xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition">
           <img src="img/b.jpeg" alt="Tips to grade high CGPA" class="w-full h-64 object-cover" />
           <div class="p-5">
             <p class="text-xs text-gray-500 mb-1 flex items-center gap-2">
               <i class="fa-regular fa-calendar text-[#00329e]"></i>
-              10 October 2025
+              <span>10 October 2025</span>
               <span class="mx-1">•</span>
               <span>By Yohanna Maggai</span>
             </p>
-            <h3 class="text-lg font-bold text-[#101318] mb-2">
-              Tips to Grade High CGPA in University Life
-            </h3>
+            <h3 class="text-lg font-bold text-[#101318] mb-2">Tips to Grade High CGPA in University Life</h3>
             <p class="text-sm text-[#5e6d8d] leading-relaxed">
-              To achieve a high CGPA, students must understand the university grading system, 
+              To achieve a high CGPA, students must understand the university grading system,
               manage time effectively, and adopt smart study habits that enhance academic success.
             </p>
           </div>
@@ -473,7 +450,7 @@
       <!-- Right Side Smaller News -->
       <div class="flex flex-col gap-6">
         <div class="flex items-start gap-4">
-          <img src="img/bn.jpg" alt="Healthy student life" class="w-32 h-24 object-cover rounded-md" />
+          <img src="img/bn.jpg" alt="Healthy student life" class="w-32 h-24 object-cover rounded-md flex-shrink-0" />
           <div>
             <p class="text-xs text-gray-500 mb-1">
               2 December 2018 <span class="mx-1">•</span> By Adam Linn
@@ -488,7 +465,7 @@
         </div>
 
         <div class="flex items-start gap-4">
-          <img src="img/cn.jpg" alt="Tips to grade high" class="w-32 h-24 object-cover rounded-md" />
+          <img src="img/cn.jpg" alt="Tips to grade high" class="w-32 h-24 object-cover rounded-md flex-shrink-0" />
           <div>
             <p class="text-xs text-gray-500 mb-1">
               2 December 2018 <span class="mx-1">•</span> By Adam Linn
@@ -505,6 +482,7 @@
     </div>
   </div>
 </section>
+
 
 
         <!-- ==================== FOOTER ==================== -->
