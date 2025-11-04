@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"
+    />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+/>
+
+    <title>OWCOE</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/a2e0e6d07b.js" crossorigin="anonymous"></script>
+    <script src="/js/slider.js"></script>
+  </head>
+<body>
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root overflow-x-hidden"
+      style='font-family: Inter, "Noto Sans", sans-serif;'
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- ==================== HEADER ==================== -->
+<header x-data="{ open: false }" class="border-b border-gray-300 bg-white relative z-50">
+  <div class="flex items-center justify-between px-6 py-3 lg:px-10">
+    <!-- Logo & College Name -->
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 flex-shrink-0">
+        <img src="/img/logo.png" alt="OWCOE Logo" class="w-full h-full object-contain" />
+      </div>
+
+      <div class="text-black leading-tight">
+        <h2 class="text-lg font-extrabold tracking-wide">OSWALD WALLER</h2>
+        <h3 class="text-sm font-extrabold tracking-wide pl-2">COLLEGE OF EDUCATION</h3>
+      </div>
+    </div>
+
+    <!-- Hamburger + Desktop Nav -->
+    <div class="flex items-center gap-6">
+      <!-- Hamburger Button (Mobile) -->
+      <button
+        @click="open = !open"
+        class="lg:hidden text-black text-2xl focus:outline-none z-50 relative"
+      >
+        <i :class="open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+      </button>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex flex-1 justify-end gap-8 text-black">
+        <nav class="flex items-center gap-8">
+          <a href="home.html" class="text-sm font-medium hover:text-[#00329e] transition">Home</a>
+
+          <!-- Administration -->
+          <div x-data="{ submenu: false }" @mouseover="submenu = true" @mouseleave="submenu = false" class="relative">
+            <a href="#" class="text-sm font-medium flex items-center gap-1 hover:text-[#00329e] transition">
+              Administration
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </a>
+            <div
+              x-show="submenu"
+              x-transition
+              class="absolute mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 overflow-hidden"
+            >
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">Management</a>
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">Provost's Office</a>
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">Registry</a>
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">Bursary</a>
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">Works Unit</a>
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">Library</a>
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">College Clinic</a>
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">Students Affair</a>
+            </div>
+          </div>
+
+          <!-- About -->
+          <div x-data="{ submenu: false }" @mouseover="submenu = true" @mouseleave="submenu = false" class="relative">
+            <a href="#" class="text-sm font-medium flex items-center gap-1 hover:text-[#00329e] transition">
+              About
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </a>
+            <div
+              x-show="submenu"
+              x-transition
+              class="absolute mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 overflow-hidden"
+            >
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">Mission & Vision</a>
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">History</a>
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">Gallery</a>
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">Contact Us</a>
+            </div>
+          </div>
+
+          <!-- Event -->
+          <div x-data="{ submenu: false }" @mouseover="submenu = true" @mouseleave="submenu = false" class="relative">
+            <a href="#" class="text-sm font-medium flex items-center gap-1 hover:text-[#00329e] transition">
+              Event
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </a>
+            <div
+              x-show="submenu"
+              x-transition
+              class="absolute mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 overflow-hidden"
+            >
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">Upcoming Events</a>
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">Past Events</a>
+              <a href="#" class="block px-4 py-3 text-sm hover:bg-gray-100">Seminars</a>
+            </div>
+          </div>
+
+          <a href="#" class="text-sm font-medium hover:text-[#00329e] transition">V-Learning</a>
+          <a href="#" class="text-sm font-medium hover:text-[#00329e] transition">Portal</a>
+        </nav>
+
+        <!-- Apply Now Button -->
+        <button class="ml-4 bg-[#00329e] text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-[#002a8a] transition">
+          Apply Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== Mobile Slide-In Menu ==================== -->
+  <div
+    x-show="open"
+    x-transition:enter="transition ease-out duration-300 transform"
+    x-transition:enter-start="translate-x-full opacity-0"
+    x-transition:enter-end="translate-x-0 opacity-100"
+    x-transition:leave="transition ease-in duration-200 transform"
+    x-transition:leave-start="translate-x-0 opacity-100"
+    x-transition:leave-end="translate-x-full opacity-0"
+    class="fixed top-0 right-0 w-4/5 max-w-xs h-full bg-white shadow-2xl border-l border-gray-200 z-40 flex flex-col justify-between"
+  >
+    <nav class="flex flex-col px-6 py-6 text-black space-y-4 overflow-y-auto">
+      <a href="home.html" class="text-sm font-medium hover:text-[#00329e]">Home</a>
+
+      <details class="text-sm">
+        <summary class="cursor-pointer font-medium hover:text-[#00329e]">Administration</summary>
+        <div class="pl-4 mt-2 space-y-2">
+          <a href="#" class="block hover:text-[#00329e]">Management</a>
+          <a href="#" class="block hover:text-[#00329e]">Provost's Office</a>
+          <a href="#" class="block hover:text-[#00329e]">Registry</a>
+          <a href="#" class="block hover:text-[#00329e]">Bursary</a>
+        </div>
+      </details>
+
+      <details class="text-sm">
+        <summary class="cursor-pointer font-medium hover:text-[#00329e]">About</summary>
+        <div class="pl-4 mt-2 space-y-2">
+          <a href="#" class="block hover:text-[#00329e]">Mission & Vision</a>
+          <a href="#" class="block hover:text-[#00329e]">History</a>
+          <a href="#" class="block hover:text-[#00329e]">Gallery</a>
+        </div>
+      </details>
+
+      <details class="text-sm">
+        <summary class="cursor-pointer font-medium hover:text-[#00329e]">Event</summary>
+        <div class="pl-4 mt-2 space-y-2">
+          <a href="#" class="block hover:text-[#00329e]">Upcoming Events</a>
+          <a href="#" class="block hover:text-[#00329e]">Past Events</a>
+        </div>
+      </details>
+
+      <a href="#" class="text-sm font-medium hover:text-[#00329e]">V-Learning</a>
+      <a href="#" class="text-sm font-medium hover:text-[#00329e]">Portal</a>
+
+      <button
+        class="mt-6 w-full bg-[#00329e] text-white font-semibold py-2 rounded-lg hover:bg-[#002a8a] transition"
+      >
+        Apply Now
+      </button>
+    </nav>
+  </div>
+</header>
+
+
+
+<section
+  id="hero-section"
+  class="relative flex min-h-[70vh] w-full flex-col items-center justify-center overflow-hidden text-center"
+  aria-labelledby="hero-heading"
+>
+  <!-- Background Video -->
+  <div class="absolute inset-0 overflow-hidden">
+    <video
+      id="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      class="w-full h-full object-cover object-center brightness-90"
+    >
+      <source src="video/hero.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay for text visibility -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/20"></div>
+  </div>
+
+  <!-- Floating Quick Links -->
+  <div
+    id="quick-links"
+    class="fixed left-4 top-1/2 -translate-y-1/2 bg-black/20 backdrop-blur-lg border border-white/20 text-white rounded-2xl shadow-xl p-4 w-48 z-50 hidden md:block transition-transform duration-300 hover:scale-[1.02]"
+  >
+    <h2 class="text-sm font-semibold mb-3 border-b border-white/20 pb-1">
+      Quick Links
+    </h2>
+    <ul class="space-y-1 text-xs">
+      <li><a href="#" class="block py-0.5 hover:text-green-400 transition">Student Portal</a></li>
+      <li><a href="#" class="block py-0.5 hover:text-green-400 transition">Admission Status</a></li>
+      <li><a href="#" class="block py-0.5 hover:text-green-400 transition">Application Forms</a></li>
+      <li><a href="#" class="block py-0.5 hover:text-green-400 transition">Library Registration</a></li>
+      <li><a href="#" class="block py-0.5 hover:text-green-400 transition">Admission List</a></li>
+      <li><a href="#" class="block py-0.5 hover:text-green-400 transition">Institute’s Advert</a></li>
+      <li><a href="#" class="block py-0.5 hover:text-green-400 transition">Email Login</a></li>
+      <li><a href="#" class="block py-0.5 hover:text-green-400 transition">E-Journal</a></li>
+      <li><a href="#" class="block py-0.5 hover:text-green-400 transition">Revalidations</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Text -->
+  <div class="relative z-10 flex max-w-2xl flex-col gap-4 text-center px-5">
+    <h1
+      id="hero-heading"
+      class="text-white text-3xl md:text-4xl font-extrabold leading-snug tracking-tight drop-shadow-lg"
+    >
+      Empowering Educators, Shaping Futures
+    </h1>
+    <p class="text-white text-xs md:text-sm font-normal leading-relaxed drop-shadow-md">
+      Oswald Waller College of Education is dedicated to fostering excellence in
+      teaching, research, and service.
+    </p>
+    <button
+      class="mx-auto bg-[#00329e] hover:bg-[#002a8a] text-white font-bold py-2 px-5 rounded-lg transition shadow-lg text-sm"
+    >
+      Apply Now
+    </button>
+  </div>
+</section>
+
+
+
+
+
+<main class="flex flex-1 flex-col bg-white">
+  <div class="mx-auto w-full max-w-6xl px-6 py-16 space-y-16">
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1">
+        <h2 class="text-[#00329e] text-2xl font-bold mb-4">About Our College</h2>
+        <p class="text-[#5e6d8d] leading-relaxed text-sm">
+          Oswald Waller College of Education is committed to shaping the next generation of educators through innovative teaching, 
+          research, and community engagement. Our mission is to foster a culture of learning that inspires academic and personal growth.
+        </p>
+        <a
+          href="#"
+          class="inline-flex items-center gap-2 mt-5 bg-[#00329e] text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-[#002a8a] transition"
+        >
+          Learn More
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
+            <path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="flex-1">
+        <img src="/img/vice.png" alt="About the college" class="rounded-xl shadow-md w-full h-auto object-cover">
+      </div>
+    </section>
+
+    <!-- ==================== ACADEMIC PROGRAMS ==================== -->
+    <section id="programs">
+      <h2 class="text-[#00329e] text-2xl font-bold mb-6 text-center">Academic Programs</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition">
+          <img src="/img/f.jpg" alt="Undergraduate" class="w-full h-56 object-cover">
+          <div class="p-5">
+            <h3 class="text-[#101318] text-lg font-semibold mb-2">Undergraduate Programs</h3>
+            <p class="text-[#5e6d8d] text-sm leading-relaxed mb-4">
+              Our undergraduate courses prepare aspiring educators to thrive in diverse learning environments through 
+              hands-on experience and academic excellence.
+            </p>
+            <a href="#" class="text-[#00329e] text-sm font-semibold hover:underline">Explore More →</a>
+          </div>
+        </div>
+
+        <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition">
+          <img src="/img/e.jpg" alt="Graduate" class="w-full h-56 object-cover">
+          <div class="p-5">
+            <h3 class="text-[#101318] text-lg font-semibold mb-2">Graduate Programs</h3>
+            <p class="text-[#5e6d8d] text-sm leading-relaxed mb-4">
+              Advance your professional journey with specialized graduate programs in leadership, special education, and curriculum design.
+            </p>
+            <a href="#" class="text-[#00329e] text-sm font-semibold hover:underline">Discover More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FACULTIES & DEPARTMENTS SECTION ==================== -->
+<section id="faculties" class="bg-gray-100 py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-[#00329e] text-2xl font-bold mb-10 text-center">
+      Faculties & Departments
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Faculty 1 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="img/ad.jpg" alt="Faculty of Science" class="w-full h-40 object-cover" />
+        <div class="p-5">
+          <p class="text-xs text-gray-500 mb-1 flex justify-between items-center">
+            <span class="text-blue-600 font-medium">Science</span>
+            <span>Est. 1983</span>
+          </p>
+          <h3 class="text-base font-bold text-[#101318] mb-1">Faculty of Science (Education)</h3>
+          <p class="text-sm text-[#5e6d8d]">
+            Physics, Chemistry, Biology, and Mathematics Education programs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Faculty 2 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="img/bd.jpg" alt="Faculty of Languages" class="w-full h-40 object-cover" />
+        <div class="p-5">
+          <p class="text-xs text-gray-500 mb-1 flex justify-between items-center">
+            <span class="text-green-600 font-medium">Languages</span>
+            <span>Est. 1992</span>
+          </p>
+          <h3 class="text-base font-bold text-[#101318] mb-1">Faculty of Languages (Education)</h3>
+          <p class="text-sm text-[#5e6d8d]">
+            English, French, Hausa, and other language education programs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Faculty 3 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="img/cd.jpg" alt="Faculty of Arts" class="w-full h-40 object-cover" />
+        <div class="p-5">
+          <p class="text-xs text-gray-500 mb-1 flex justify-between items-center">
+            <span class="text-orange-600 font-medium">Arts</span>
+            <span>Est. 1978</span>
+          </p>
+          <h3 class="text-base font-bold text-[#101318] mb-1">Faculty of Arts & Social Sciences</h3>
+          <p class="text-sm text-[#5e6d8d]">
+            Arts, humanities, and social sciences programs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Faculty 4 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="img/dd.jpg" alt="Faculty of Vocational Education" class="w-full h-40 object-cover" />
+        <div class="p-5">
+          <p class="text-xs text-gray-500 mb-1 flex justify-between items-center">
+            <span class="text-purple-600 font-medium">Vocational</span>
+            <span>Est. 1990</span>
+          </p>
+          <h3 class="text-base font-bold text-[#101318] mb-1">Faculty of Vocational Education</h3>
+          <p class="text-sm text-[#5e6d8d]">
+            Technical and vocational education training programs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- =========== STATISTICS (WITH COUNT ANIMATION) ==================== -->
+<section id="university-stats" class="bg-[#f8f9fc] py-16 text-center">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-[#00329e] text-2xl font-bold mb-10">University Statistics</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 text-center">
+      <div>
+        <i class="fa-solid fa-users text-[#00329e] text-3xl mb-2"></i>
+        <h3 class="count text-xl font-bold text-[#101318]" data-target="14000">0</h3>
+        <p class="text-sm text-[#5e6d8d]">Students Enrolled</p>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-graduation-cap text-[#00329e] text-3xl mb-2"></i>
+        <h3 class="count text-xl font-bold text-[#101318]" data-target="85">0</h3>
+        <p class="text-sm text-[#5e6d8d]">Graduation Rate (%)</p>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-chalkboard-user text-[#00329e] text-3xl mb-2"></i>
+        <h3 class="count text-xl font-bold text-[#101318]" data-target="760">0</h3>
+        <p class="text-sm text-[#5e6d8d]">Faculty Members</p>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-trophy text-[#00329e] text-3xl mb-2"></i>
+        <h3 class="count text-xl font-bold text-[#101318]" data-target="25">0</h3>
+        <p class="text-sm text-[#5e6d8d]">Awards Won</p>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-user-graduate text-[#00329e] text-3xl mb-2"></i>
+        <h3 class="count text-xl font-bold text-[#101318]" data-target="15492">0</h3>
+        <p class="text-sm text-[#5e6d8d]">Undergraduate Students</p>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-book-open text-[#00329e] text-3xl mb-2"></i>
+        <h3 class="count text-xl font-bold text-[#101318]" data-target="213">0</h3>
+        <p class="text-sm text-[#5e6d8d]">Postgraduate Students</p>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-sack-dollar text-[#00329e] text-3xl mb-2"></i>
+        <h3 class="count text-xl font-bold text-[#101318]" data-target="4.5" data-suffix="B">0</h3>
+        <p class="text-sm text-[#5e6d8d]">Total Budget</p>
+      </div>
+
+      <div>
+        <i class="fa-solid fa-chart-line text-[#00329e] text-3xl mb-2"></i>
+        <h3 class="count text-xl font-bold text-[#101318]" data-target="555" data-suffix="M">0</h3>
+        <p class="text-sm text-[#5e6d8d]">IGR Revenue</p>
+      </div>
+    </div>
+
+    <button class="mt-8 bg-[#00329e] hover:bg-[#002d72] text-white font-semibold px-6 py-2 rounded-md">
+      View Statistics Details
+    </button>
+  </div>
+</section>
+
+
+  </div>
+</main>
+
+<!-- ==================== CAMPUS / GENERAL NEWS SECTION ==================== -->
+<section id="campus-news" class="bg-white py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-[#00329e] text-2xl font-bold mb-8">
+      Campus / General News
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <!-- Left Featured Article -->
+      <div class="md:col-span-2 space-y-4">
+        <div class="rounded-xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition">
+          <img src="img/b.jpeg" alt="Tips to grade high CGPA" class="w-full h-64 object-cover" />
+          <div class="p-5">
+            <p class="text-xs text-gray-500 mb-1 flex items-center gap-2">
+              <i class="fa-regular fa-calendar text-[#00329e]"></i>
+              10 October 2025
+              <span class="mx-1">•</span>
+              <span>By Yohanna Maggai</span>
+            </p>
+            <h3 class="text-lg font-bold text-[#101318] mb-2">
+              Tips to Grade High CGPA in University Life
+            </h3>
+            <p class="text-sm text-[#5e6d8d] leading-relaxed">
+              To achieve a high CGPA, students must understand the university grading system, 
+              manage time effectively, and adopt smart study habits that enhance academic success.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side Smaller News -->
+      <div class="flex flex-col gap-6">
+        <div class="flex items-start gap-4">
+          <img src="img/bn.jpg" alt="Healthy student life" class="w-32 h-24 object-cover rounded-md" />
+          <div>
+            <p class="text-xs text-gray-500 mb-1">
+              2 December 2018 <span class="mx-1">•</span> By Adam Linn
+            </p>
+            <h4 class="text-sm font-bold text-[#101318] leading-snug">
+              The Responsibility of Maintaining a Healthy Life as a University Student
+            </h4>
+            <p class="text-xs text-[#5e6d8d]">
+              Maintaining health is essential for academic success — good health supports focus and productivity.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <img src="img/cn.jpg" alt="Tips to grade high" class="w-32 h-24 object-cover rounded-md" />
+          <div>
+            <p class="text-xs text-gray-500 mb-1">
+              2 December 2018 <span class="mx-1">•</span> By Adam Linn
+            </p>
+            <h4 class="text-sm font-bold text-[#101318] leading-snug">
+              Tips to Grade High CGPA in University Life
+            </h4>
+            <p class="text-xs text-[#5e6d8d]">
+              Master time management, attend lectures, and use peer study groups effectively.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <!-- ==================== FOOTER ==================== -->
+<footer class="bg-[#edf0f2] text-black">
+  <!-- Top Section -->
+  <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <!-- Logo & About -->
+    <div>
+     <div class="flex items-center gap-2 px-2 py-1">
+  <!-- Logo -->
+  <a href="#" class="inline-block">
+    <img src="img/logo.png" alt="Logo" class="w-12 h-auto">
+  </a>
+
+  <!-- Text -->
+  <div class="text-black leading-snug">
+    <h2 class="text-xs font-semibold tracking-wide">OSWALD WALLER</h2>
+    <h3 class="text-[11px] font-semibold tracking-wide">COLLEGE OF EDUCATION</h3>
+  </div>
+</div>
+
+
+      <p class="text-sm leading-relaxed">
+        It is our vision to meet modern challenges through renewed ideas based on global best practices.
+      </p>
+      <ul class="flex gap-3 mt-3">
+       
+        <a href="#" class="hover:text-gray-200"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-gray-200"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-gray-200"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="hover:text-gray-200"><i class="fab fa-instagram"></i></a>
+      
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-sm font-semibold mb-2">Quick Links</h3>
+      <ul class="space-y-1 text-sm">
+        <li><a href="#" class="hover:text-gray-300 transition">Admissions</a></li>
+        <li><a href="#" class="hover:text-gray-300 transition">Academic Calendar</a></li>
+        <li><a href="#" class="hover:text-gray-300 transition">Departments</a></li>
+        <li><a href="#" class="hover:text-gray-300 transition">Student Portal</a></li>
+        <li><a href="#" class="hover:text-gray-300 transition">Staff Portal</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div>
+      <h3 class="text-sm font-semibold mb-2">Resources</h3>
+      <ul class="space-y-1 text-sm">
+        <li><a href="#" class="hover:text-gray-300 transition">Contact Us</a></li>
+        <li><a href="#" class="hover:text-gray-300 transition">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-gray-300 transition">Terms of Service</a></li>
+        <li><a href="#" class="hover:text-gray-300 transition">FAQs</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="text-sm font-semibold mb-2">Get in Touch</h3>
+      <ul class="space-y-1 text-sm">
+        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-gray-300"></i><span>123 Education Avenue, Lagos</span></li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-gray-300"></i><span>+234 801 234 5678</span></li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-gray-300"></i><span>info@oswaldwaller.edu.ng</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-600 bg-[#00329e] py-3">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-center items-center text-sm">
+      <p>© <span id="year"></span> Oswald Waller College of Education. All rights reserved.</p>
+      
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+
+      </div>
+    </div>
+  </body>
+</html>
