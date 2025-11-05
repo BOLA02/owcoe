@@ -34,38 +34,41 @@
       <div class="layout-container flex h-full grow flex-col">
         <!-- ==================== HEADER ==================== -->
 <header x-data="{ open: false }" class="border-b border-gray-700 bg-black text-white relative z-50">
-  <div class="flex items-center justify-between px-6 py-3 lg:px-10">
+  <div class="flex items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
     <!-- Logo & College Name -->
-        <div class="flex items-center gap-3">
-        <!-- Logo -->
-        <div class="flex-shrink-0">
-          <img src="/img/frame.jpg" alt="OWCOE Logo" class="w-full h-full object-contain w-16 h-16 " />
-        </div>
-
-  </div>
-
-
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex-shrink-0 ">
+        <img
+          src="/img/frame.jpg"
+          alt="OWCOE Logo"
+          class="w-full h-full sm:w-[36px] sm:h-[36px] object-contain"
+        />
+      </div>
+     
+    </div>
 
     <!-- Hamburger + Desktop Nav -->
-    <div class="flex items-center gap-6">
+    <div class="flex items-center gap-4 sm:gap-6">
       <!-- Hamburger Button (Mobile) -->
-      <button
-        @click="open = !open"
-        class="lg:hidden text-white text-2xl focus:outline-none z-50 relative"
-      >
-        <i :class="open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
-      </button>
+      <!-- Hamburger Button (Mobile) -->
+<button
+  @click="open = !open"
+  class="lg:hidden text-2xl focus:outline-none relative z-50 transition-colors duration-300"
+  :class="open ? 'text-black' : 'text-white'"
+>
+  <i :class="open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+</button>
+
 
       <!-- Desktop Menu -->
       <div class="hidden lg:flex flex-1 justify-end gap-8 text-white">
         <nav class="flex items-center gap-8">
-          <a href="home.html" class="text-base font-sm hover:text-green-400 transition">Home</a>
+          <a href="home.html" class="text-base hover:text-green-400 transition">Home</a>
 
           <!-- Administration -->
           <div x-data="{ submenu: false }" @mouseover="submenu = true" @mouseleave="submenu = false" class="relative">
-            <a href="#" class="text-base font-sm flex items-center gap-1 hover:text-green-400 transition">
-              Administration
-              <i class="fa-solid fa-chevron-down text-xs"></i>
+            <a href="#" class="flex items-center gap-1 hover:text-green-400 transition">
+              Administration <i class="fa-solid fa-chevron-down text-xs"></i>
             </a>
             <div
               x-show="submenu"
@@ -85,9 +88,8 @@
 
           <!-- About -->
           <div x-data="{ submenu: false }" @mouseover="submenu = true" @mouseleave="submenu = false" class="relative">
-            <a href="#" class="text-base font-sm flex items-center gap-1 hover:text-green-400 transition">
-              About
-              <i class="fa-solid fa-chevron-down text-xs"></i>
+            <a href="#" class="flex items-center gap-1 hover:text-green-400 transition">
+              About <i class="fa-solid fa-chevron-down text-xs"></i>
             </a>
             <div
               x-show="submenu"
@@ -103,9 +105,8 @@
 
           <!-- Event -->
           <div x-data="{ submenu: false }" @mouseover="submenu = true" @mouseleave="submenu = false" class="relative">
-            <a href="#" class="text-base font-sm flex items-center gap-1 hover:text-green-400 transition">
-              Event
-              <i class="fa-solid fa-chevron-down text-xs"></i>
+            <a href="#" class="flex items-center gap-1 hover:text-green-400 transition">
+              Event <i class="fa-solid fa-chevron-down text-xs"></i>
             </a>
             <div
               x-show="submenu"
@@ -118,8 +119,8 @@
             </div>
           </div>
 
-          <a href="#" class="text-base font-sm hover:text-green-400 transition">V-Learning</a>
-          <a href="#" class="text-base font-sm hover:text-green-400 transition">Portal</a>
+          <a href="#" class="hover:text-green-400 transition">V-Learning</a>
+          <a href="#" class="hover:text-green-400 transition">Portal</a>
         </nav>
 
         <!-- Apply Now Button -->
@@ -142,11 +143,61 @@
     class="fixed top-0 right-0 w-4/5 max-w-xs h-full bg-white shadow-2xl border-l border-gray-200 z-40 flex flex-col justify-between"
   >
     <nav class="flex flex-col px-6 py-6 text-black space-y-4 overflow-y-auto">
-      <a href="home.html" class="text-sm font-sm hover:text-[#00329e]">Home</a>
-      <!-- Other mobile links remain unchanged -->
+      <a href="home.html" class="text-sm font-medium hover:text-[#0b683c]">Home</a>
+
+      <!-- Administration -->
+      <div x-data="{ submenu: false }" class="space-y-2">
+        <button @click="submenu = !submenu" class="flex justify-between items-center w-full text-sm font-medium hover:text-[#0b683c]">
+          Administration <i :class="submenu ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'"></i>
+        </button>
+        <div x-show="submenu" x-transition class="pl-4 space-y-1 text-gray-700">
+          <a href="#" class="block text-sm hover:text-[#0b683c]">Management</a>
+          <a href="#" class="block text-sm hover:text-[#0b683c]">Provost's Office</a>
+          <a href="#" class="block text-sm hover:text-[#0b683c]">Registry</a>
+          <a href="#" class="block text-sm hover:text-[#0b683c]">Bursary</a>
+          <a href="#" class="block text-sm hover:text-[#0b683c]">Works Unit</a>
+          <a href="#" class="block text-sm hover:text-[#0b683c]">Library</a>
+          <a href="#" class="block text-sm hover:text-[#0b683c]">College Clinic</a>
+          <a href="#" class="block text-sm hover:text-[#0b683c]">Students Affair</a>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div x-data="{ submenu: false }" class="space-y-2">
+        <button @click="submenu = !submenu" class="flex justify-between items-center w-full text-sm font-medium hover:text-[#0b683c]">
+          About <i :class="submenu ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'"></i>
+        </button>
+        <div x-show="submenu" x-transition class="pl-4 space-y-1 text-gray-700">
+          <a href="#" class="block text-sm hover:text-[#0b683c]">Mission & Vision</a>
+          <a href="#" class="block text-sm hover:text-[#0b683c]">History</a>
+          <a href="#" class="block text-sm hover:text-[#0b683c]">Gallery</a>
+          <a href="#" class="block text-sm hover:text-[#0b683c]">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- Event -->
+      <div x-data="{ submenu: false }" class="space-y-2">
+        <button @click="submenu = !submenu" class="flex justify-between items-center w-full text-sm font-medium hover:text-[#0b683c]">
+          Event <i :class="submenu ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down'"></i>
+        </button>
+        <div x-show="submenu" x-transition class="pl-4 space-y-1 text-gray-700">
+          <a href="#" class="block text-sm hover:text-[#0b683c]">Upcoming Events</a>
+          <a href="#" class="block text-sm hover:text-[#0b683c]">Past Events</a>
+          <a href="#" class="block text-sm hover:text-[#0b683c]">Seminars</a>
+        </div>
+      </div>
+
+      <a href="#" class="text-sm font-medium hover:text-[#0b683c]">V-Learning</a>
+      <a href="#" class="text-sm font-medium hover:text-[#0b683c]">Portal</a>
+
+      <button class="mt-4 bg-[#0b683c] text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-green-700 transition w-full">
+        Apply Now
+      </button>
     </nav>
   </div>
 </header>
+
+
 
 
 
