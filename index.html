@@ -18,7 +18,7 @@
     <title>OWCOE- Oswald Waller College Of Education</title>
     
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="img/logo.jpg" type="img/jpg">
+    <link rel="shortcut icon" href="img/icon.png" type="img/png">
     <link rel="icon" type="img/x-icon" href="data:img/x-icon;base64," />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
@@ -34,12 +34,12 @@
       <div class="layout-container flex h-full grow flex-col">
         <!-- ==================== HEADER ==================== -->
 <header x-data="{ open: false }" class="border-b border-gray-700 bg-black text-white relative z-50">
-  <div class="flex items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
+  <div class="flex items-center justify-between px-4 py-3 sm:px-6 lg:px-4">
     <!-- Logo & College Name -->
     <div class="flex items-center gap-2 sm:gap-3">
   <div class="flex-shrink-0">
     <img
-      src="/img/frame.jpg"
+      src="/img/2.jpg"
       alt="OWCOE Logo"
       class="w-[105px] h-[105px] sm:w-auto sm:h-auto object-contain"
     />
@@ -51,7 +51,7 @@
     <!-- Hamburger + Desktop Nav -->
     <div class="flex items-center gap-4 sm:gap-6">
       <!-- Hamburger Button (Mobile) -->
-      <!-- Hamburger Button (Mobile) -->
+     
 <button
   @click="open = !open"
   class="lg:hidden text-2xl focus:outline-none relative z-50 transition-colors duration-300"
@@ -227,24 +227,28 @@
 
   <!-- Floating Quick Links -->
   <div
-    id="quick-links"
-    class="fixed left-3 top-1/3 -translate-y-1/3 bg-black/70 backdrop-blur-xl border border-white/20 text-white rounded-2xl shadow-2xl p-2 w-30 sm:w-50 z-50 transition-transform duration-300 hover:scale-[1.03]"
-  >
-    <h2 class="text-lg font-sm mb-4 border-b border-white/30 pb-2 tracking-wide text-center">
-      Quick Links
-    </h2>
-    <ul class="text-sm divide-y divide-white/20">
-      <li><a href="#" class="block py-2 hover:text-green-400 transition">Student Portal</a></li>
-      <li><a href="#" class="block py-2 hover:text-green-400 transition">Admission Status</a></li>
-      <li><a href="#" class="block py-2 hover:text-green-400 transition">Application Forms</a></li>
-      <li><a href="#" class="block py-2 hover:text-green-400 transition">Library Registration</a></li>
-      <li><a href="#" class="block py-2 hover:text-green-400 transition">Download Student Handbook</a></li>
-      <li><a href="#" class="block py-2 hover:text-green-400 transition">Student Revalidation</a></li>
-      <li><a href="#" class="block py-2 hover:text-green-400 transition">Other Payment</a></li>
-      <li><a href="#" class="block py-2 hover:text-green-400 transition">Payment Status Verification</a></li>
-      <li><a href="#" class="block py-2 hover:text-green-400 transition">Clearance Forms</a></li>
-    </ul>
-  </div>
+  id="quick-links"
+  class="fixed left-3 top-1/3 -translate-y-1/3 bg-black/70 backdrop-blur-xl border 
+         border-white/20 text-white rounded-xl shadow-xl p-1 w-24 sm:w-32 
+         z-50 transition-transform duration-300 hover:scale-[1.03]"
+>
+  <h2 class="text-md font-medium mb-2 border-b border-white/30 pb-1 text-center">
+    Quick Links
+  </h2>
+
+  <ul class="text-xs divide-y divide-white/20">
+    <li><a href="#" class="block py-1 hover:text-green-400 transition">Student Portal</a></li>
+    <li><a href="#" class="block py-1 hover:text-green-400 transition">Admission Status</a></li>
+    <li><a href="#" class="block py-1 hover:text-green-400 transition">Application Forms</a></li>
+    <li><a href="#" class="block py-1 hover:text-green-400 transition">Library Registration</a></li>
+    <li><a href="#" class="block py-1 hover:text-green-400 transition">Download Handbook</a></li>
+    <li><a href="#" class="block py-1 hover:text-green-400 transition">Revalidation</a></li>
+    <li><a href="#" class="block py-1 hover:text-green-400 transition">Other Payment</a></li>
+    <li><a href="#" class="block py-1 hover:text-green-400 transition">Payment Status</a></li>
+    <li><a href="#" class="block py-1 hover:text-green-400 transition">Clearance Forms</a></li>
+  </ul>
+</div>
+
 
   <!-- Hero Text -->
   <div class="relative z-10 flex max-w-2xl flex-col gap-4 text-center px-5">
@@ -273,7 +277,7 @@
 
 
 <main class="flex flex-1 flex-col bg-white">
-  <div class="w-full max-w-7xl mx-auto px-4 py-4 space-y-12">
+  <div class="w-full max-w-7xl mx-auto px-20 py-4 space-y-12">
 
     <!-- ==================== ABOUT SECTION ==================== -->
 <section id="about" class="flex flex-col md:flex-row items-start gap-8 pt-0">
@@ -289,7 +293,7 @@ value to any society. By choosing our institution, we are glad you are setting o
     </p>
     <a
       href="#"
-      class="inline-flex justify-center items-center w-40 mt-5 bg-[#0b683c] text-white px-5 py-2 rounded-lg text-sm font-sm hover:bg-[#002a8a] transition shadow-md"
+      class="inline-flex justify-center items-center w-40 mt-5 bg-[#0b683c] text-white px-5 py-2 rounded-lg text-sm font-sm hover:bg-[#0b683c] transition shadow-md"
     >
       Learn More
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256" class="ml-2">
@@ -299,14 +303,19 @@ value to any society. By choosing our institution, we are glad you are setting o
       </svg>
     </a>
   </div>
-
+<div>
  <div class="flex-1 flex justify-center items-start">
   <img
-    src="/img/vice.jpg"
+    src="/img/vice.png"
     alt="About the college"
     class="rounded-xl shadow-md w-[260px] h-[260px] object-cover"
   />
+  
 </div>
+<div class="text-[#0b683c] text-2xl font-semibold">
+    <p>Assoc. Prof. Fr. Penlong J. Nietlong</p>
+  </div>
+  </div>
 
 </section>
 
@@ -411,7 +420,7 @@ value to any society. By choosing our institution, we are glad you are setting o
       
       <div>
         <i class="fa-solid fa-users text-[#0b683c] text-3xl mb-2"></i>
-        <h3 class="count text-xl font-bold text-[#101318]" data-target="14000">0</h3>
+        <h3 class="count text-xl font-bold text-[#101318]" data-target="650">0</h3>
         <p class="text-sm text-[#5e6d8d]">Students Enrolled</p>
       </div>
 
@@ -423,14 +432,14 @@ value to any society. By choosing our institution, we are glad you are setting o
 
       <div>
         <i class="fa-solid fa-trophy text-[#0b683c] text-3xl mb-2"></i>
-        <h3 class="count text-xl font-bold text-[#101318]" data-target="25">0</h3>
+        <h3 class="count text-xl font-bold text-[#101318]" data-target="5">0</h3>
         <p class="text-sm text-[#5e6d8d]">Awards Won</p>
       </div>
 
       <div>
         <i class="fa-solid fa-user-graduate text-[#0b683c] text-3xl mb-2"></i>
-        <h3 class="count text-xl font-bold text-[#101318]" data-target="15492">0</h3>
-        <p class="text-sm text-[#5e6d8d]">Undergraduate Students</p>
+        <h3 class="count text-xl font-bold text-[#101318]" data-target="43">0</h3>
+        <p class="text-sm text-[#5e6d8d]">Academic Staffs</p>
       </div>
 
       <div>
@@ -441,7 +450,7 @@ value to any society. By choosing our institution, we are glad you are setting o
 
       <div>
         <i class="fa-solid fa-sack-dollar text-[#0b683c] text-3xl mb-2"></i>
-        <h3 class="count text-xl font-bold text-[#101318]" data-target="4.5" data-suffix="B">0</h3>
+        <h3 class="count text-xl font-bold text-[#101318]" data-target="25" data-suffix="M">0</h3>
         <p class="text-sm text-[#5e6d8d]">Total Budget</p>
       </div>
       
@@ -470,9 +479,9 @@ value to any society. By choosing our institution, we are glad you are setting o
               <span class="mx-1">•</span>
               <span>By Yohanna Maggai</span>
             </p>
-            <h3 class="text-lg font-bold text-[#101318] mb-2">Tips to Grade High CGPA in University Life</h3>
+            <h3 class="text-lg font-bold text-[#101318] mb-2">Tips to Grade High CGPA in College Life</h3>
             <p class="text-sm text-[#5e6d8d] leading-relaxed">
-              To achieve a high CGPA, students must understand the university grading system,
+              To achieve a high CGPA, students must understand the College grading system,
               manage time effectively, and adopt smart study habits that enhance academic success.
             </p>
           </div>
@@ -488,7 +497,7 @@ value to any society. By choosing our institution, we are glad you are setting o
               2 December 2018 <span class="mx-1">•</span> By Adam Linn
             </p>
             <h4 class="text-sm font-bold text-[#101318] leading-snug">
-              The Responsibility of Maintaining a Healthy Life as a University Student
+              The Responsibility of Maintaining a Healthy Life as a College Student
             </h4>
             <p class="text-xs text-[#5e6d8d]">
               Maintaining health is essential for academic success — good health supports focus and productivity.
@@ -503,7 +512,7 @@ value to any society. By choosing our institution, we are glad you are setting o
               2 December 2018 <span class="mx-1">•</span> By Adam Linn
             </p>
             <h4 class="text-sm font-bold text-[#101318] leading-snug">
-              Tips to Grade High CGPA in University Life
+              Tips to Grade High CGPA in College Life
             </h4>
             <p class="text-xs text-[#5e6d8d]">
               Master time management, attend lectures, and use peer study groups effectively.
@@ -527,7 +536,7 @@ value to any society. By choosing our institution, we are glad you are setting o
      <div class="flex items-center gap-2 px-2 py-1">
   <!-- Logo -->
   <a href="#" class="inline-block">
-    <img src="img/logo.jpg" alt="Logo" class="w-12 h-auto">
+    <img src="img/logo.webp" alt="Logo" class="w-12 h-auto">
   </a>
 
   <!-- Text -->
@@ -588,10 +597,12 @@ value to any society. By choosing our institution, we are glad you are setting o
 
   <!-- Bottom Bar -->
   <div class="border-t border-gray-600 bg-[#0b683c] py-3">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-center items-center text-sm">
-      <p>© <span id="year"></span> Oswald Waller College of Education Plateau State. All rights reserved.</p>
+    <div class="max-w-7xl mx-auto px-4 flex sm:flex-row justify-center items-center text-sm">
+      <p class="text-white">© <span id="year"></span> Oswald Waller College of Education Plateau State. All rights reserved.</p>
+     
       
     </div>
+     <p class="max-w-7xl mx-auto px-4 flex sm:flex-row justify-center items-center text-sm">(Designed by <a href="https://www.Attonyx.com" class="hover:text-gray-300 transition">Attonyx Nig Ltd</a>)</p>
   </div>
 </footer>
 
